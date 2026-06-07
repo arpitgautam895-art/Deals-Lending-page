@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Deals Hub</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0088cc,#1e293b);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+color:white;
+}
+.card{
+max-width:520px;
+width:100%;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.badge{
+display:inline-block;
+padding:8px 14px;
+border-radius:999px;
+background:rgba(255,255,255,.2);
+margin-bottom:16px;
+font-weight:bold;
+}
+h1{
+font-size:32px;
+margin-bottom:12px;
+}
+p{
+line-height:1.6;
+opacity:.95;
+}
+.stats{
+display:flex;
+justify-content:space-around;
+margin:24px 0;
+}
+.stat{
+background:rgba(255,255,255,.1);
+padding:12px;
+border-radius:12px;
+width:30%;
+}
+.btn{
+display:block;
+background:white;
+color:#0088cc;
+text-decoration:none;
+padding:16px;
+border-radius:14px;
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+transition:.2s;
+}
+.btn:hover{transform:scale(1.03)}
+.small{
+margin-top:15px;
+font-size:13px;
+opacity:.8;
+}
+.timer{
+margin:18px 0;
+font-size:18px;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="badge">🔥 Limited Time Deals</div>
+<h1>Join Our Telegram Deals Group</h1>
+<p>Get daily shopping deals, discounts, coupon codes and special offers directly on Telegram.</p>
+
+<div class="stats">
+<div class="stat"><strong>Daily</strong><br>Deals</div>
+<div class="stat"><strong>Fast</strong><br>Updates</div>
+<div class="stat"><strong>Free</strong><br>Join</div>
+</div>
+
+<div class="timer">Redirect in <span id="count">5</span> sec...</div>
+
+<a class="btn" href="https://t.me/+Y-ej7MKgTshhNDI1">🚀 Join Telegram Now</a>
+
+<div class="small">By joining, you will be redirected to our Telegram community.</div>
+</div>
+
+<script>
+let s=5;
+const el=document.getElementById("count");
+const i=setInterval(()=>{
+s--;
+el.textContent=s;
+if(s<=0){
+clearInterval(i);
+window.location.href="https://t.me/+Y-ej7MKgTshhNDI1";
+}
+},1000);
+</script>
+</body>
+</html>
